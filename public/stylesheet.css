@@ -1,0 +1,61 @@
+body {
+    background-color: #003d7c;
+    background-size: contain;
+    background-attachment:fixed
+}
+
+
+.main {
+    background-color: #ef7c00;
+    margin: auto;
+    width: 80%;
+    min-height: 850px;
+    text-align: center;   
+}
+
+.list {
+    border: 1px solid;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+h1 {
+    font-family:'Marker Felt';
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    color: #ef7c00;
+    text-shadow: black 0.04em 0.04em
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+}
+
+input[type=text] {
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+button {
+    width: 15%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+th, td {
+    text-align: center;
+    border: 0.04em solid;
+}
+
+p {
+    width: 10%;
+    height: 10%;
+    float: left;
+    margin: 5%;
+}
