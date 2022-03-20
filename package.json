@@ -1,10 +1,10 @@
 {
   "name": "it5007_tutorial",
   "version": "1.0.0",
-  "description": "tutorial 3",
+  "description": "tutorial 4",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w server server/server.js",
+    "start": "nodemon -w server -e js,graphql server/server.js",
     "compile": "babel src --out-dir public",
     "watch": "babel src --out-dir public --watch --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/denisecheng1208/IT5007_tutorial#readme",
   "dependencies": {
-    "express": "^4.17.3",
+    "apollo-server-express": "^2.25.3",
+    "express": "^4.16.4",
+    "graphql": "^0.13.2",
+    "mongodb": "^3.1.10",
     "nodemon": "^1.18.9"
   },
   "devDependencies": {

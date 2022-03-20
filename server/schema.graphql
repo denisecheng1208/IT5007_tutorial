@@ -1,0 +1,26 @@
+type Traveller {
+  _id: ID!
+  id: Int!
+  name: String!
+  tel: String
+  timeStamp: String!
+}
+
+"used as inputs, without server generated values."
+input TravellerInputs {
+  name: String!
+  tel: String
+}
+
+##### Top level declarations
+
+type Query {
+  travellerList: [Traveller!]!
+  inBlackList(traveller: TravellerInputs!): Boolean!
+}
+
+type Mutation {
+  travellerAdd(traveller: TravellerInputs!): Traveller!
+  travellerDelete(tid: Int!): String
+  createBlackList(traveller: TravellerInputs!): String
+}

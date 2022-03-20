@@ -10,10 +10,22 @@ nvm alias default 10
 node --version
 npm --version
 npm install -g npm@6
-npm init
-npm install express
-npm uninstall express
-npm install express@4
+npm install
+```
+
+### Set up mongodb
+```
+apt install gnupg
+curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+apt update
+apt install mongodb-org
+mkdir -p /data/db
+screen mongod
+
+mongo travellertracker --eval "db.employees.remove({})" 
+node scripts/trymongo.js
+mongo travellertracker scripts/init.mongo.js
 ```
 
 ### JSX Transform
@@ -28,3 +40,4 @@ npx babel src --presets @babel/react --out-dir public
 ```
 node server.js
 npm start
+
